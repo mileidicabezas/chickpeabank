@@ -1,6 +1,7 @@
 package models;
 
 import Enum.AccountStatus;
+import exceptions.NegativeValuesException;
 
 public abstract class Account {
     protected String accountNumber;
@@ -30,7 +31,7 @@ public abstract class Account {
         return balance;
     }
 
-    public abstract void deposit(double depositAmount);
+    public abstract void deposit(double depositAmount) throws NegativeValuesException;
 
     public abstract void withdraw(double withdrawalAmount);
 

@@ -30,6 +30,10 @@ public abstract class Account {
         return balance;
     }
 
+    public abstract void deposit(double depositAmount);
+
+    public abstract void withdraw(double withdrawalAmount);
+
     public abstract String print();
 
 }

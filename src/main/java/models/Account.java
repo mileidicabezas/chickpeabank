@@ -10,6 +10,7 @@ public abstract class Account {
     protected AccountStatus accountStatus;
 
     public Account() {
+        this.accountStatus = AccountStatus.ACTIVE;
         this.id = id;
     }
 
@@ -28,7 +29,6 @@ public abstract class Account {
     public double getBalance() {
         return balance;
     }
-
 
     public abstract String print();
 

@@ -1,10 +1,13 @@
 package models;
 
+import Enum.AccountStatus;
+
 public abstract class Account {
     protected String accountNumber;
     protected int id;
     protected double interest;
     protected double balance;
+    protected AccountStatus accountStatus;
 
     public Account() {
         this.id = id;

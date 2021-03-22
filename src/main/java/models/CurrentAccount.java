@@ -1,6 +1,9 @@
 package models;
 
+import exceptions.InsufficientValuesException;
+import exceptions.InvalidValuesException;
 import exceptions.NegativeValuesException;
+import exceptions.OutRangeValuesException;
 
 public class CurrentAccount extends Account {
     final double INTEREST_AMOUNT = 0.00015;
@@ -25,8 +28,23 @@ public class CurrentAccount extends Account {
     }
 
     @Override
-    public void withdraw(double withdrawalAmount) {
+    public void withdraw(double withdrawalAmount) throws NegativeValuesException, OutRangeValuesException, InvalidValuesException, InsufficientValuesException {
+        final double MINIMAL_WITHDRAWAL_VALUE = 0;
+        final double MAXIMAL_WITHDRAWAL_VALUE = 2000.0;
 
+        if (withdrawalAmount < MINIMAL_WITHDRAWAL_VALUE) {
+            throw new NegativeValuesException();
+        }
+        if (withdrawalAmount > MAXIMAL_WITHDRAWAL_VALUE) {
+            throw new OutRangeValuesException();
+        }
+        if (withdrawalAmount == MINIMAL_WITHDRAWAL_VALUE) {
+            throw new InvalidValuesException();
+        }
+        if (withdrawalAmount > this.balance) {
+            throw new InsufficientValuesException();
+        }
+        this.balance = this.balance - withdrawalAmount;
     }
 
     @Override

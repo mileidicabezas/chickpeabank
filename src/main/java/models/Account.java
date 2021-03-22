@@ -1,7 +1,10 @@
 package models;
 
 import Enum.AccountStatus;
+import exceptions.InsufficientValuesException;
+import exceptions.InvalidValuesException;
 import exceptions.NegativeValuesException;
+import exceptions.OutRangeValuesException;
 
 public abstract class Account {
     protected String accountNumber;
@@ -33,7 +36,7 @@ public abstract class Account {
 
     public abstract void deposit(double depositAmount) throws NegativeValuesException;
 
-    public abstract void withdraw(double withdrawalAmount);
+    public abstract void withdraw(double withdrawalAmount) throws NegativeValuesException, OutRangeValuesException, InvalidValuesException, InsufficientValuesException;
 
     public abstract String print();
 

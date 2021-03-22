@@ -34,9 +34,21 @@ public abstract class Account {
         return balance;
     }
 
-    public abstract void deposit(double depositAmount) throws NegativeValuesException;
+    public AccountStatus getAccountStatus() {
+        return accountStatus;
+    }
+
+    public abstract void deposit(double depositAmount) throws NegativeValuesException, InvalidValuesException;
 
     public abstract void withdraw(double withdrawalAmount) throws NegativeValuesException, OutRangeValuesException, InvalidValuesException, InsufficientValuesException;
+
+    public void disable(){
+        this.accountStatus = AccountStatus.LOCKED;
+    }
+
+    public void enable(){
+        this.accountStatus = AccountStatus.ACTIVE;
+    }
 
     public abstract String print();
 

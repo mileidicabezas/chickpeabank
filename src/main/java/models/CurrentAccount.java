@@ -48,7 +48,9 @@ public class CurrentAccount extends Account {
     }
 
     @Override
-        public String print() {
-            return null;
-        }
+    public String print() {
+        final String detail = "Id Account " + getId() + " Balance Account " + this.balance
+                + " Account Status " + getAccountStatus();
+        return detail;
+    }
 }

@@ -1,5 +1,6 @@
 package models;
 import Enum.MaritalStatus;
+import exceptions.RepeatedValuesException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +32,13 @@ public class Client {
 
     public List<Account> getAccountsList() {
         return accountsList;
+    }
+    public void addAccount(Account account) throws RepeatedValuesException {
+
+        if(accountsList.contains(account)){
+            throw new RepeatedValuesException();
+        }
+        this.accountsList.add(account);
     }
 
     public String print() {

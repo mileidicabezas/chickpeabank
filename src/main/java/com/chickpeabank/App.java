@@ -1,11 +1,9 @@
 package com.chickpeabank;
-import exceptions.NegativeValuesException;
-import services.ChickpeaDomainService;
-import exceptions.OutRangeValuesException;
-import exceptions.InvalidValuesException;
-import exceptions.RepeatedValuesException;
-import models.Account;
-import Enum.MaritalStatus;
+import com.chickpeabank.exceptions.*;
+import com.chickpeabank.models.*;
+import com.chickpeabank.Enum.MaritalStatus;
+import com.chickpeabank.services.*;
+
 import java.util.Scanner;
 
 public class App {
@@ -44,6 +42,7 @@ public class App {
         System.out.println("Enter the account number");
         String accountNumber = read.next();
         bankDomainService.createSavingsAccount(accountNumber);
+
         System.out.println("Successful registration");
     }
 

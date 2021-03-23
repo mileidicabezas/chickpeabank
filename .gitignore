@@ -1,3 +1,5 @@
 .idea/
 chickpeabank.iml
 pom.xml
+target/
+

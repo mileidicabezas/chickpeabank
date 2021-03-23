@@ -1,4 +1,4 @@
-package exceptions;
+package com.chickpeabank.exceptions;
 
 public class InsufficientValuesException extends Throwable {
     @Override

@@ -1,8 +1,8 @@
-package services;
+package com.chickpeabank.services;
 
 import java.io.PrintStream;
 import java.util.Scanner;
-import Enum.MaritalStatus;
+import com.chickpeabank.Enum.MaritalStatus;
 public class ChickpeaService {
     private PrintStream printStream;
     private Scanner scanner;

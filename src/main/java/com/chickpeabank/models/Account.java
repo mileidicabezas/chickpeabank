@@ -1,10 +1,10 @@
-package models;
+package com.chickpeabank.models;
 
-import Enum.AccountStatus;
-import exceptions.InsufficientValuesException;
-import exceptions.InvalidValuesException;
-import exceptions.NegativeValuesException;
-import exceptions.OutRangeValuesException;
+import com.chickpeabank.Enum.AccountStatus;
+import com.chickpeabank.exceptions.InsufficientValuesException;
+import com.chickpeabank.exceptions.InvalidValuesException;
+import com.chickpeabank.exceptions.NegativeValuesException;
+import com.chickpeabank.exceptions.OutRangeValuesException;
 
 public abstract class Account {
     protected String accountNumber;

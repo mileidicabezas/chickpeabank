@@ -1,9 +1,9 @@
-package models;
+package com.chickpeabank.models;
 
-import exceptions.InsufficientValuesException;
-import exceptions.InvalidValuesException;
-import exceptions.NegativeValuesException;
-import exceptions.OutRangeValuesException;
+import com.chickpeabank.exceptions.InsufficientValuesException;
+import com.chickpeabank.exceptions.InvalidValuesException;
+import com.chickpeabank.exceptions.NegativeValuesException;
+import com.chickpeabank.exceptions.OutRangeValuesException;
 
 public class CurrentAccount extends Account {
     final double INTEREST_AMOUNT = 0.00015;

@@ -1,6 +1,6 @@
-package models;
-import Enum.MaritalStatus;
-import exceptions.RepeatedValuesException;
+package com.chickpeabank.models;
+import com.chickpeabank.Enum.MaritalStatus;
+import com.chickpeabank.exceptions.RepeatedValuesException;
 
 import java.util.ArrayList;
 import java.util.List;
